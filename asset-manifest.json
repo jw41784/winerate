@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/winerate/static/css/main.ad997195.css",
-    "main.js": "/winerate/static/js/main.185fe79e.js",
+    "main.js": "/winerate/static/js/main.cbc7bbd3.js",
     "static/js/198.31cfc8ec.chunk.js": "/winerate/static/js/198.31cfc8ec.chunk.js",
     "index.html": "/winerate/index.html",
     "main.ad997195.css.map": "/winerate/static/css/main.ad997195.css.map",
-    "main.185fe79e.js.map": "/winerate/static/js/main.185fe79e.js.map",
+    "main.cbc7bbd3.js.map": "/winerate/static/js/main.cbc7bbd3.js.map",
     "198.31cfc8ec.chunk.js.map": "/winerate/static/js/198.31cfc8ec.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad997195.css",
-    "static/js/main.185fe79e.js"
+    "static/js/main.cbc7bbd3.js"
   ]
 }

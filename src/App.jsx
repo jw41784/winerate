@@ -247,7 +247,7 @@ function AuthScreen() {
     <div className="h-screen flex items-center justify-center bg-indigo-700">
       <Auth 
         supabaseClient={supabase} 
-        providers={["google"]} 
+        providers={[]} 
         appearance={{ theme: ThemeSupa }} 
         theme="dark" 
         redirectTo={window.location.origin + window.location.pathname}

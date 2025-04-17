@@ -55,9 +55,10 @@ export function Dialog({ triggerLabel, children }) {
 /* ---------------------------------------------------------------------------
    2. Supabase safe init (placeholders)                                        
    ------------------------------------------------------------------------*/
-const env = (typeof import.meta !== "undefined" ? import.meta.env : process.env) || {};
-const supabaseUrl = env.VITE_SUPABASE_URL || env.REACT_APP_SUPABASE_URL || "https://PLACEHOLDER.supabase.co";
-const supabaseKey = env.VITE_SUPABASE_ANON_KEY || env.REACT_APP_SUPABASE_ANON_KEY || "PLACEHOLDER_KEY";
+// Direct initialization with explicit values for GitHub Pages
+const supabaseUrl = "https://tddiorfkzneocopywaxo.supabase.co";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRkZGlvcmZrem5lb2NvcHl3YXhvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ4NDg3ODgsImV4cCI6MjA2MDQyNDc4OH0.APApYV-MC9J2A7K_ArKfv0aS9vn6fLJxo_tg_xA2Zv8";
+
 export const supabase = createClient(supabaseUrl, supabaseKey, { 
   auth: { 
     persistSession: true,

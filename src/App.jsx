@@ -58,7 +58,13 @@ export function Dialog({ triggerLabel, children }) {
 const env = (typeof import.meta !== "undefined" ? import.meta.env : process.env) || {};
 const supabaseUrl = env.VITE_SUPABASE_URL || env.REACT_APP_SUPABASE_URL || "https://PLACEHOLDER.supabase.co";
 const supabaseKey = env.VITE_SUPABASE_ANON_KEY || env.REACT_APP_SUPABASE_ANON_KEY || "PLACEHOLDER_KEY";
-export const supabase = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: true } });
+export const supabase = createClient(supabaseUrl, supabaseKey, { 
+  auth: { 
+    persistSession: true,
+    autoRefreshToken: true,
+    detectSessionInUrl: true
+  }
+});
 
 /* ---------------------------------------------------------------------------
    3. Helper rating components                                                 
@@ -241,10 +247,10 @@ function AuthScreen() {
     <div className="h-screen flex items-center justify-center bg-indigo-700">
       <Auth 
         supabaseClient={supabase} 
-        providers={["github", "google"]} 
+        providers={["google"]} 
         appearance={{ theme: ThemeSupa }} 
         theme="dark" 
-        redirectTo={window.location.origin}
+        redirectTo={window.location.origin + window.location.pathname}
       />
     </div>
   );
